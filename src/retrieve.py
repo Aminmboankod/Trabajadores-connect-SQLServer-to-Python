@@ -1,4 +1,4 @@
-from src.conectionLayer import conexion, cursor
+from src.connectionLayer import conexion, cursor
 
 # Librería para manipulación de imágenes
 from PIL import Image
@@ -11,7 +11,7 @@ def buscar_imagen():
 
     int(input("Introduce el ID del trabajador"))
     cursor.execute("SELECT imagen from trabajadores where id = %s", (id))
-    registro = cursor.fetchone()
+    registro = cursor.fetchone() # mirar para que sirve
     imagen = registro[0]
     convertir_blob_imagen(imagen).show()
     conexion.close()
