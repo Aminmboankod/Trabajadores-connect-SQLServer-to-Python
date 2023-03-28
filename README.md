@@ -39,17 +39,10 @@ Se debe incluir la creación de usuarios y la asignación de privilegios y roles
    - [Instalación](#instalación)
    - [Uso](#uso)
    - [Dependencias](#dependencias)
-      - [Docker]()
 
 # Instalación
 
 Para comenzar con el proceso de instalación y creación de la base de datos propuesta, vamos a enumerar e instalar todas las dependencias necesarias.
-
-```
-Docker 23.0.1
-SQL Server 2022-RTM-CU2-ubuntu-20.04 (Imagen de Docker)
-SQL Server Management Studio 19.0.2
-```
 Descarga y puesta en marcha del contenido del repositorio:
 ```
 clone https://github.com/Aminmboankod/Trabajadores-connect-SQLServer-to-Python
