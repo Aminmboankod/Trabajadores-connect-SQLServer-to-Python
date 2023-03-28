@@ -1,4 +1,4 @@
-from src.connectionLayer import conexion, cursor
+from src.db.acceso_bd import cursor, conexion
 
 # Librería para manipulación de imágenes
 from PIL import Image
@@ -7,7 +7,7 @@ import io
 
 
 # Insercción de imágenes en la base de datos
-def buscar_imagen():
+def buscar():
 
     int(input("Introduce el ID del trabajador"))
     cursor.execute("SELECT Foto from Trabajadores where id = %s", (id))

@@ -52,6 +52,9 @@ SQL Server Management Studio 19.0.2
 ```
 Descarga y puesta en marcha del contenido del repositorio:
 ```
-clone
+clone https://github.com/Aminmboankod/Trabajadores-connect-SQLServer-to-Python
+python3 -m venv venv
+source venv/bin/activate (linux)
+source venv/Scripts/activate (Windows)
 pip3 install -r requirements.txt
 ```

@@ -1,4 +1,5 @@
-from src.retrieve import buscar_imagen 
+from acceso_imagen import buscar
+from insertar_imagen import insertar
 
 
 
@@ -6,6 +7,6 @@ from src.retrieve import buscar_imagen
 
 if __name__=="__main__":
 
-    buscar_imagen()
+    buscar()
 
-    insertar_imagen()
+    insertar()
