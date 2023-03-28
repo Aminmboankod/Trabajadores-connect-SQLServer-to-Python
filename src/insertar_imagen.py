@@ -5,7 +5,7 @@ import os
 
 ruta = "../src/imagen/"
 fotos = sorted(os.listdir(ruta))
-
+id = 1
 
 
 def insertar():
@@ -13,15 +13,18 @@ def insertar():
 
         # Leer la imagen que deseas insertar en modo binario
         with open(ruta + str(imagen), 'rb') as archivo_imagen:
+
             datos_imagen = archivo_imagen.read()
 
-        # Convertir la imagen en datos binarios
-        datos_binarios = base64.b64encode(datos_imagen)
+            # Convertir la imagen en datos binarios
+            datos_binarios = base64.b64encode(datos_imagen)
 
-        # Ejecutar la consulta SQL para insertar la imagen en la tabla
-        consulta = "INSERT INTO Trabajador (Foto) VALUES (?)"
-        cursor.execute(consulta, datos_binarios)
-        conexion.commit()
+            # Ejecutar la consulta SQL para insertar la imagen en la tabla
+            consulta = "UPDATE Trabajador SET Foto = %s WHERE ID = %s"
+            cursor.execute(consulta, (datos_binarios, id))
+            conexion.commit()
 
-        # Cerrar la conexión a la base de datos
-        conexion.close()
+            # Cerrar la conexión a la base de datos
+            conexion.close()
+
+            id += 1
