@@ -28,3 +28,17 @@ def insertar():
             conexion.close()
 
             id += 1
+
+
+def insertar_trabajador():
+
+    id_trabajador = input("Inserta el ID del trabajador al que quieras añadirle una imagen: ")
+    foto_trabajador = input("Inserta la imagen que quieres añadir al trabajador")
+    with open(ruta + foto_trabajador, 'rb') as archivo_imagen:
+
+        datos_imagen = archivo_imagen.read()
+        datos_binarios = base64.b16decode(datos_imagen)
+        consulta = "UPDATE Trabajador SET Foto = %s WHERE ID = %s"
+        cursor.execute(consulta, (datos_binarios, id_trabajador))
+        conexion.commit()
+        conexion.close()
