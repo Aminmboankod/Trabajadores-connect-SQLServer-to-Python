@@ -1,2 +1,2 @@
-Pillow==9.4.0
-pyodbc==4.0.35
+mysql-connector==2.2.9
+
