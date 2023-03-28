@@ -10,7 +10,7 @@ import io
 def buscar_imagen():
 
     int(input("Introduce el ID del trabajador"))
-    cursor.execute("SELECT imagen from trabajadores where id = %s", (id))
+    cursor.execute("SELECT Foto from Trabajadores where id = %s", (id))
     registro = cursor.fetchone() # mirar para que sirve
     imagen = registro[0]
     convertir_blob_imagen(imagen).show()
